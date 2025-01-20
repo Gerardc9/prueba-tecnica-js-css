@@ -1,7 +1,157 @@
+:root {
+  --bg-color: #0d4073;
+  --color-header-h1: #c9d9e8;
+  --color-subtitles: #12ebfe;
+  --color-sidebar-titles: #0d4073;
+  --bg-color-test-data: #79a6d2;
+  --bg-color-expected-result: #a5d321;
+  --bg-color-your-result: #c52d96;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", sans-serif;
-    height: 100%;
-    width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  background-color: var(--bg-color);
+  background-image: url("./assets/bg-triangles.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 0rem 0rem 1rem 1rem;
+}
+
+header h1 {
+  color: var(--color-header-h1);
+  font-weight: 400;
+  flex: 2;
+}
+
+header img {
+  align-self: flex-end;
+  height: 40px;
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  color: white;
+}
+
+.main-content section {
+  padding-bottom: 1rem;
+}
+
+.main-content h2 {
+  color: var(--color-subtitles);
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.main-content ul {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+  margin-left: 0;
+}
+
+.main-content li::marker {
+  color: var(--color-subtitles);
+  font-size: 0.8rem;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar h2,
+.sidebar h3 {
+  color: var(--color-sidebar-titles);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.container-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+}
+
+.container-result p {
+  color: white;
+  font-size: 3rem;
+}
+
+.card.test-data {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--bg-color-test-data);
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.card.test-data span {
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.card:not(.test-data) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  height: 170px;
+  padding: 1.5rem;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.card.expected-result {
+  background-color: var(--bg-color-expected-result);
+}
+
+.card.result {
+  background-color: var(--bg-color-your-result);
+}
+
+@media (min-width: 768px) {
+  #app {
+    width: 676px;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  #app {
+    width: 676px;
+  }
+}

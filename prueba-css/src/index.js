@@ -1,26 +1,51 @@
-
 var arrayTest = [1, 2, 3, 3, 2, 1, 4];
 
 document.getElementById("app").innerHTML = `
-  <h1>Unique Element Challenge</h1>
-
-  <h2>Target</h2>
-  <div>Find the unique value in the array that is not duplicated. Use the <b>dubbed</b> function to return the unique element.</div>
-
-  <h2>Considerations</h2>
-  <ul>
-    <li>Values are duplicated only twice.</li>
-    <li>There is only one non duplicate value.</li>
-    <li>The non duplicate value can be placed anywhere on the array.</li>
-    <li>The result must be an integer.</li>
-  </ul>
+  <header>
+    <h1>Unique Element Challenge</h1>
+    <img src="./src/assets/logo.svg" alt="Logo" />
+  </header>
   
-  <h2>Test Data</h2>
-  <div>${arrayTest}</div>
+  <main>
+    <section class="main-content">
+      <section>
+        <h2>Target</h2>
+        <div>Find the unique value in the array that is not duplicated. Use the <b>dubbed</b> function to return the unique element.</div>
+      </section>
     
-  <h2>Expected result</h2>
-  <div>4</div>
+      <section>
+        <h2>Considerations</h2>
+        <ul>
+          <li>Values are duplicated only twice.</li>
+          <li>There is only one non duplicate value.</li>
+          <li>The non duplicate value can be placed anywhere on the array.</li>
+          <li>The result must be an integer.</li>
+        </ul>
+      </section>
+    </section>
 
-  <h2>Your Result</h2>
-  <div>4</div>
+    <aside class="sidebar">
+
+      <section class="card test-data">
+        <h2>Test Data</h2>
+        <span>${arrayTest}</span>
+      </section>
+
+
+      <div class="container-result">
+        <section class="card expected-result">
+          <h3>Expected result</h3>
+          <p>4</p>
+        </section>
+
+        <section class="card result">
+          <h3>Your result</h3>
+          <p>4</p>
+        </section>
+      </div>
+
+
+    </aside>
+
+  </main>
 `;
